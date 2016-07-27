@@ -1,0 +1,7 @@
+<h1>Bitte gib ein Lied ein.</h1>
+
+<%= simple_form_for @song, url: {action: "create"} do |f| %>
+  <%= f.input :name, label: 'Songtitel' %>
+  <%= f.input :url, label: 'URL' %>
+  <%= f.submit "Einreichen" %>
+<% end %>

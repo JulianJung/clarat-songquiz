@@ -1,0 +1,31 @@
+== SongQuiz
+
+1. (Startseite)
+
+2. Lied eingeben v
+  - Name
+  - URL (Youtube)
+
+3. Liederraten
+  - merkt sich Zwischenstände
+  - irgendwann kann abgeschickt werden
+
+4. Auflösung
+  - erst wenn alle geraten haben
+
+
+TODO:
+- Username befüllen
+- Den guesses & songs die current_user_id mitgeben
+- round_id den einzelnen guesses und songs mitgeben
+- Vergleich der Guesses mit der tatsächlichen Einreichung
+- Login authentifcation - Nur Moderator darf Runde anlegen
+
+Thema: Guess create
+- Kein song_id, kein username - fixen!
+- Sortierung füllt Formular aus
+- Validierung für Name etc. (evtl auch für Song)
+- Dankeseite / Auswertung ... Weiterleitung
+
+- Sicherheit (ich kann das Lied von anderen über Danke Seite ansehen) - Users!
+-

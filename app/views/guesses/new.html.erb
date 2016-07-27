@@ -1,0 +1,25 @@
+<h1>Bitte rate.</h1>
+
+<ul id="sortable_names">
+  <% @songs.each do |songcontainer| %>
+    <li class="ui-state-default" data-songid="<%= songcontainer.id %>"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%= songcontainer.name %></li>
+  <% end %>
+</ul>
+
+<ul id="sortable_users">
+  <% @usernames.each do |username| %>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%= username %></li>
+  <% end %>
+</ul>
+
+<%= form_tag("/guesses", method: "post") do %>
+  <% @songs.each_with_index do |_name, index| %>
+    <%= hidden_field_tag("guess_song_#{index}") %>
+    <%= hidden_field_tag("guess_user_#{index}") %>
+  <% end %>
+
+  <%= label_tag(:guesser_name, "Dein Name") %>
+  <%= text_field_tag(:guesser_name) %>
+  <br/>
+  <%= submit_tag("Einreichen", id: "guesses_submit") %>
+<% end %>

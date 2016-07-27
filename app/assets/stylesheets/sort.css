@@ -1,0 +1,22 @@
+#sortable_names {
+  display: inline-block;
+}
+#sortable_names, #sortable_users {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+#sortable_names li, #sortable_users li {
+  margin: 0 3px 3px 3px;
+  padding-left: 1.5em;
+  height: 20px; 
+}
+#sortable_names li span, #sortable_users li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
+
+#sortable_users {
+  float: right;
+}

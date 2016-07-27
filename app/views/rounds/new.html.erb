@@ -1,0 +1,6 @@
+<h1>Bitte lege eine Runde an.</h1>
+
+<%= simple_form_for @round, url: {action: "create"} do |f| %>
+  <%= f.input :topic, label: 'Runden-Thema' %>
+  <%= f.submit "Anlegen" %>
+<% end %>
