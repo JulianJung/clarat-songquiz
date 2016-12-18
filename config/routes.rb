@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  get '/songs/new' => 'songs#new'
+  get '/songs/new' => 'songs#new', as: :songs_new
   post '/songs' => 'songs#create'
   get '/songs/thanks' => 'songs#thanks', as: :songs_thanks
 
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/guesses/thanks' => 'guesses#thanks', as: :guess_thanks
   root 'songs#new'
 
-  get '/rounds/new' => 'rounds#new'
+  get '/rounds/new' => 'rounds#new', as: :rounds_new
   post '/rounds' => 'rounds#create'
 
 
