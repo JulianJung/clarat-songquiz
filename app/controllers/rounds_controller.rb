@@ -1,6 +1,6 @@
 class RoundsController < ApplicationController
   def new
-    if current_user.round_lead == true
+    if current_user.round_lead == false
       @round = Round.new
       render :new
     ## hier noch ein elsif fuer den fall das die vorige Runde abgelaufen ist
