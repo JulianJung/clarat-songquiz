@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  # TODO: Bevor die `new` action aufgerufen wird, soll kontrolliert werden, ob wir uns am richtigen Ort befinden und wenn nicht, sollen wir zum richtigen Ort weitergeleitet werden (oder zu einem forwarder der dies übernimmt).
   def new
     @song = Song.new
     render :new
